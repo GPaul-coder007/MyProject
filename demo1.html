@@ -217,6 +217,15 @@
       pointer-events: none;
     }
 
+    .Image {
+      position: relative;
+      padding-left: 50px;
+      padding-right: 25px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 5;
+    }
+
     .foreground img {
       width: 100%;
       height: auto;
@@ -262,6 +271,11 @@
 
 <body>
   <header class="nav">
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="logo">TEW</div>
     <nav class="navlinks">
       <a href="#">HOME</a>
@@ -269,11 +283,6 @@
       <a href="#">ABOUT US</a>
       <a href="#">FACILITIES</a>
     </nav>
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
     <div class="contactus">
       <button class="cta-nav" href="#contact">Contact Us</button>
     </div>
@@ -283,7 +292,7 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="container">
       <div class="badge">#1 on OEM manufacturing</div>
-      <h1>Complete OEM Manufacturing Solutions<br/>for Industrial Engineering Needs</h1>
+      <h1>Complete OEM Manufacturing Solutions<br />for Industrial Engineering Needs</h1>
       <p class="lead">Thirumala Engineering Works is a trusted OEM partner, delivering forged and precision‑machined
         components with end‑to‑end engineering solutions for industrial brands, all under one roof.</p>
       <a class="hero-cta" href="#capabilities">Explore Capabilities</a>
