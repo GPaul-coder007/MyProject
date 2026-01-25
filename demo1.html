@@ -8,6 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@500&family=Inter:wght@700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="hero-section.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -287,6 +288,40 @@
       border-top-right-radius: 48px;
     }
 
+    .letter-o {
+      width: 38px;
+      height: 38px;
+      /* perfect circle */
+      border-radius: 50%;
+
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+
+      transition:
+        width .45s ease,
+        border-radius .45s ease;
+    }
+
+    /* background/video/image */
+    .mask-layer {
+      position: absolute;
+      inset: 8%;
+      border-radius: 24px;
+      background-image: url('https://www.figma.com/api/mcp/asset/809da851-4100-48f6-8bf1-2d43864904c9');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* HOVER → oval shape */
+    .letter-o:hover {
+      width: 90px;
+      /* stretch horizontally */
+      border-radius: 40px;
+      /* keeps pill shape smooth */
+    }
+
     /* responsive */
     @media(max-width:900px) {
       h1 {
@@ -327,22 +362,28 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="container">
       <div class="badge">
-        <img src="C:\Users\ygand\Downloads\dot.png" alt=""> #1 on OEM manufacturing</div>
-      <h1>Complete OEM Manufacturing Solutions<br />for Industrial Engineering Needs</h1>
+        <img src="dot.png" alt=""> #1 on OEM manufacturing</div>
+      <h1>
+        Complete
+        <span class="letter-o">
+          <span class="mask-layer"></span>
+        </span>EM Manufacturing Solutions<br />
+        for Industrial Engineering Needs
+      </h1>
       <p class="lead">Thirumala Engineering Works is a trusted OEM partner, delivering forged and precision‑machined
         components with end‑to‑end engineering solutions for industrial brands, all under one roof.</p>
-        <a class="hero-cta" href="#capabilities">Explore Capabilities</a>
+      <a class="hero-cta" href="#capabilities">Explore Capabilities</a>
     </div>
     <div class="Image">
-      <img src="C:\Users\ygand\Downloads\Hero Card image (1).png" alt="">
-      <img src="C:\Users\ygand\Downloads\Hero Card image.png" alt="">
+      <img src="Hero Card image (1).png" alt="">
+      <img src="Hero Card image.png" alt="">
     </div>
 
     <div class="foreground" role="presentation">
       <img src="https://www.figma.com/api/mcp/asset/3ffa9a28-5ff6-4480-9402-2037c17e44e6" alt="Hero foreground" />
     </div>
     <div class="herogradient" role="gradient">
-      <img src="C:\Users\ygand\Downloads\Ellipse 4.png" alt="gradient">
+      <img src="Ellipse 4.png" alt="gradient">
     </div>
     <div class="rounded-band" aria-hidden="true"></div>
   </section>
