@@ -1,116 +1,189 @@
-const imgFrame10000103911="https://www.figma.com/api/mcp/asset/b942e317-a0cb-4402-b15b-2153c0477380";
-const imgBg="https://www.figma.com/api/mcp/asset/273bd9e4-5033-4a93-b111-a9dc2010fe0a";
-const imgBcoF6E4E538B62240Ec88D028Ce661F539C1="https://www.figma.com/api/mcp/asset/3ffa9a28-5ff6-4480-9402-2037c17e44e6";
-const img1="https://www.figma.com/api/mcp/asset/05161d9a-208e-4344-9414-2277f311bcf6";
-const img2="https://www.figma.com/api/mcp/asset/6696b5c0-9458-445e-b46b-ba395a88a195";
-const imgEllipse1="https://www.figma.com/api/mcp/asset/dabf22c3-f4ca-436c-821b-a8cf0621edd1";
-const imgEllipse2="https://www.figma.com/api/mcp/asset/3d60fcd7-f1aa-470f-b50e-6e6939a0baae";
-const img="https://www.figma.com/api/mcp/asset/ecd358a1-7fc7-4bf4-b297-2735646e81cd";
-const imgEllipse4="https://www.figma.com/api/mcp/asset/4e3c80c2-d84e-4c0b-baf7-01bde8c8c103";
+const imgFrame10000103911 = "https://www.figma.com/api/mcp/asset/b942e317-a0cb-4402-b15b-2153c0477380";
+const imgBg = "https://www.figma.com/api/mcp/asset/273bd9e4-5033-4a93-b111-a9dc2010fe0a";
+const imgBcoF6E4E538B62240Ec88D028Ce661F539C1 = "https://www.figma.com/api/mcp/asset/3ffa9a28-5ff6-4480-9402-2037c17e44e6";
+const img1 = "https://www.figma.com/api/mcp/asset/05161d9a-208e-4344-9414-2277f311bcf6";
+const img2 = "https://www.figma.com/api/mcp/asset/6696b5c0-9458-445e-b46b-ba395a88a195";
+const imgEllipse1 = "https://www.figma.com/api/mcp/asset/dabf22c3-f4ca-436c-821b-a8cf0621edd1";
+const imgEllipse2 = "https://www.figma.com/api/mcp/asset/3d60fcd7-f1aa-470f-b50e-6e6939a0baae";
+const img = "https://www.figma.com/api/mcp/asset/ecd358a1-7fc7-4bf4-b297-2735646e81cd";
+const imgEllipse4 = "https://www.figma.com/api/mcp/asset/4e3c80c2-d84e-4c0b-baf7-01bde8c8c103";
 
-type HeroCardImageProps= {
+type HeroCardImageProps = {
   className?: string;
-  property1?: "Default"| "Variant2"| "Variant3"| "Variant4"| "Variant5";
+  property1?: "Default" | "Variant2" | "Variant3" | "Variant4" | "Variant5";
+};
+
+function HeroCardImage({ className, property1 = "Default" }: HeroCardImageProps) {
+  return (
+    <div data-node-id="302:357" className={className || "relative size-[260px]"}>
+      <div data-node-id="302:358" className="absolute h-[148.5px] left-[calc(50%+0.37px)] shadow-[-6px_6px_10px_0px_rgba(255,94,0,0.3)] top-[calc(50%-0.38px)] translate-x-[-50%] translate-y-[-50%] w-[157px]" data-name="Frame 1000010391 1">
+        <img className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" alt="" src={imgFrame10000103911} />
+      </div>
+      <div data-node-id="302:359" className="absolute left-0 size-[130px] top-0" />
+      <div data-node-id="302:360" className="absolute right-0 size-[130px] top-0" />
+      <div data-node-id="302:361" className="absolute bottom-0 right-0 size-[130px]" />
+      <div data-node-id="302:362" className="absolute bottom-0 left-0 size-[130px]" />
+    </div>
+  );
 }
-
-;
-
-function HeroCardImage( {
-    className, property1="Default"
-  }
-
-  : HeroCardImageProps) {
-  return (<div data-node-id="302:357"className= {
-      className || "relative size-[260px]"
-    }
-
-    > <div data-node-id="302:358"className="absolute h-[148.5px] left-[calc(50%+0.37px)] shadow-[-6px_6px_10px_0px_rgba(255,94,0,0.3)] top-[calc(50%-0.38px)] translate-x-[-50%] translate-y-[-50%] w-[157px]"data-name="Frame 1000010391 1"> <img className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"alt=""src= {
-      imgFrame10000103911
-    }
-
-    /> </div> <div data-node-id="302:359"className="absolute left-0 size-[130px] top-0"/> <div data-node-id="302:360"className="absolute right-0 size-[130px] top-0"/> <div data-node-id="302:361"className="absolute bottom-0 right-0 size-[130px]"/> <div data-node-id="302:362"className="absolute bottom-0 left-0 size-[130px]"/> </div>);
-}
-
-type PointProps= {
+type PointProps = {
   className?: string;
-  property1?: "Frame 27"| "Frame 28"| "Frame 29";
+  property1?: "Frame 27" | "Frame 28" | "Frame 29";
+};
+
+function Point({ className, property1 = "Frame 27" }: PointProps) {
+  return (
+    <div data-node-id="302:305" className={className || "relative size-[10px] translate-y-[-50%]"}>
+      <div data-node-id="302:306" className="absolute left-1/2 size-[10px] top-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <img className="block max-w-none size-full" alt="" src={imgEllipse1} />
+      </div>
+      <div data-node-id="302:307" className="absolute left-1/2 size-[10px] top-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <img className="block max-w-none size-full" alt="" src={imgEllipse2} />
+      </div>
+    </div>
+  );
 }
-
-;
-
-function Point( {
-    className, property1="Frame 27"
-  }
-
-  : PointProps) {
-  return (<div data-node-id="302:305"className= {
-      className || "relative size-[10px] translate-y-[-50%]"
-    }
-
-    > <div data-node-id="302:306"className="absolute left-1/2 size-[10px] top-1/2 translate-x-[-50%] translate-y-[-50%]"> <img className="block max-w-none size-full"alt=""src= {
-      imgEllipse1
-    }
-
-    /> </div> <div data-node-id="302:307"className="absolute left-1/2 size-[10px] top-1/2 translate-x-[-50%] translate-y-[-50%]"> <img className="block max-w-none size-full"alt=""src= {
-      imgEllipse2
-    }
-
-    /> </div> </div>);
-}
-
-type NavIndicatorProps= {
+type NavIndicatorProps = {
   className?: string;
-  property1?: "Rectangle 27"| "Rectangle 28"| "Rectangle 29";
-}
+  property1?: "Rectangle 27" | "Rectangle 28" | "Rectangle 29";
+};
 
-;
-
-function NavIndicator( {
-    className, property1="Rectangle 28"
-  }
-
-  : NavIndicatorProps) {
-  return (<div data-node-id="302:293"className= {
-      className || "h-[2px] relative shadow-[0px_1px_3px_0px_rgba(255,94,0,0.08)] w-[48px]"
-    }
-
-    > <div data-node-id="302:294"className="absolute bg-gradient-to-r from-[#120600] inset-0 rounded-[16px] to-[#120600] via-[#fe5200]"/> </div>);
+function NavIndicator({ className, property1 = "Rectangle 28" }: NavIndicatorProps) {
+  return (
+    <div data-node-id="302:293" className={className || "h-[2px] relative shadow-[0px_1px_3px_0px_rgba(255,94,0,0.08)] w-[48px]"}>
+      <div data-node-id="302:294" className="absolute bg-gradient-to-r from-[#120600] inset-0 rounded-[16px] to-[#120600] via-[#fe5200]" />
+    </div>
+  );
 }
 
 export default function HeroSection() {
-  return (<div className="bg-black relative size-full"data-name="Hero Section"data-node-id="302:387"> <div className="absolute h-[900px] left-0 overflow-clip top-0 w-[1440px]"data-name="Hero"data-node-id="302:388"> <div className="absolute h-[900px] left-0 mix-blend-screen opacity-30 top-1/2 translate-y-[-50%] w-[1600px]"data-name="Bg"data-node-id="302:389"> <img alt=""className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"src= {
-      imgBg
-    }
-
-    /> </div> <div className="absolute content-stretch flex gap-[198px] items-center left-[calc(50%+0.5px)] top-[64px] translate-x-[-50%]"data-node-id="314:482"> <div className="content-stretch flex gap-[239px] items-center relative shrink-0"data-node-id="314:481"> <div className="bg-[rgba(255,255,255,0.1)] border-[1.5px] border-[rgba(255,255,255,0.1)] border-solid content-stretch flex items-center justify-center px-[10px] py-[12px] relative rounded-[20px] shrink-0"data-node-id="302:392"> <div className="flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] not-italic relative shrink-0 text-[#ff671f] text-[36px] tracking-[-4.32px] whitespace-nowrap"data-node-id="302:393"> <p className="leading-[normal]">TEW</p> </div> </div> <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.04)] border border-[rgba(254,82,0,0.2)] border-solid content-stretch flex gap-[36px] items-center justify-center px-[26px] py-[12px] relative rounded-[26px] shrink-0"data-node-id="302:394"> <div className="content-stretch flex flex-col items-center relative shrink-0 w-[75px]"data-node-id="302:395"> <div className="content-stretch flex flex-col items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0 w-full"data-node-id="302:396"> <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.8)] tracking-[0.96px] whitespace-nowrap"data-node-id="302:397"> <p className="leading-[1.45]">Home</p> </div> </div> <NavIndicator className="h-[2px] relative shadow-[0px_1px_3px_0px_rgba(255,94,0,0.08)] shrink-0 w-full"/> </div> <div className="content-stretch flex flex-col items-center relative shrink-0"data-node-id="302:399"> <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0 w-full"data-node-id="302:400"> <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap"data-node-id="302:401"> <p className="leading-[1.45]">Capabilities</p> </div> </div> </div> <div className="content-stretch flex flex-col items-center relative shrink-0"data-node-id="302:403"> <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0"data-node-id="302:404"> <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap"data-node-id="302:405"> <p className="leading-[1.45]">About Us</p> </div> </div> </div> <div className="content-stretch flex flex-col items-center relative shrink-0"data-node-id="302:407"> <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0"data-node-id="302:408"> <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap"data-node-id="302:409"> <p className="leading-[1.45]">Facilities</p> </div> </div> </div> </div> </div> <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] border-solid content-stretch flex flex-col items-start p-[9px] relative rounded-[24px] shrink-0"data-node-id="302:411"> <div className="content-stretch flex flex-col items-start relative rounded-[16px] shrink-0 w-full"data-name="Hero CTA"data-node-id="302:412"> <div className="bg-[#fe5200] border border-[#ffa880] border-solid content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[16px] shadow-[0px_4px_16px_0px_rgba(255,94,0,0.5)] shrink-0"data-node-id="I302:412;35:43"> <div className="flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white whitespace-nowrap"data-node-id="I302:412;35:44"> <p className="leading-[1.45]">Contact Us</p> </div> <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_-11px_16px_0px_rgba(255,243,237,0.3)]"/> </div> </div> </div> </div> <div className="absolute h-[771px] left-[calc(50%+2px)] top-[551px] translate-x-[-50%] w-[1156px]"data-name="BCO.f6e4e538-b622-40ec-88d0-28ce661f539c 1"data-node-id="302:413"> <img alt=""className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"src= {
-      imgBcoF6E4E538B62240Ec88D028Ce661F539C1
-    }
-
-    /> </div> <div className="absolute content-stretch flex flex-col gap-[8px] items-center left-[calc(50%-0.25px)] top-[218px] translate-x-[-50%] w-[1043.5px]"data-node-id="302:414"> <div className="bg-[rgba(255,93,18,0.25)] content-stretch flex gap-[10px] items-center justify-center px-[14px] py-[8px] relative rounded-[64px] shrink-0"data-node-id="302:415"> <Point className="relative shrink-0 size-[10px]"/> <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[0.048px] whitespace-nowrap"data-node-id="302:417"> <p className="leading-[1.4]">#1 on OEM manufacturing</p> </div> </div> <div className="content-stretch flex flex-col gap-[36px] items-center relative shrink-0 w-full"data-node-id="302:418"> <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full"data-node-id="302:419"> <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full"data-node-id="302:420"> <div className="content-stretch flex gap-[18px] items-center justify-center relative shrink-0 w-full"data-node-id="302:421"> <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap"data-node-id="302:422"> <p className="leading-[1.6]"> {
-      `Complete `
-    }
-
-    </p> </div> <div className="content-stretch flex gap-[2.5px] items-center relative shrink-0"data-node-id="302:423"> <div className="relative shrink-0 size-[38px]"data-name="Letter O"data-node-id="308:472"> <div className="absolute bg-white inset-0 rounded-[100px]"data-node-id="I308:472;39:131"/> <div className="absolute aspect-[34/34] contents left-[10.53%] right-[10.53%] top-1/2 translate-y-[-50%]"data-node-id="I308:472;39:135"> <div className="absolute aspect-[400/225] left-[-28.2%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[14.714px_2.098px] mask-size-[30px_30px] right-[-31.1%] top-[calc(50%-0.07px)] translate-y-[-50%]"data-name="videoplayback (2) 1"data-node-id="I308:472;39:133"style= {
-        {
-        maskImage: `url('${img}')`
-      }
-    }
-
-    > <img alt=""className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"src= {
-      img1
-    }
-
-    /> </div> </div> </div> <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap"data-node-id="302:425"> <p className="leading-[1.6]">EM</p> </div> </div> <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap"data-node-id="302:426"> <p className="leading-[1.6]">Manufacturing Solutions</p> </div> </div> <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-white tracking-[0.46px] whitespace-nowrap"data-node-id="302:427"> <p className="leading-[1.6]"> {
-      ` for Industrial Engineering Needs`
-    }
-
-    </p> </div> </div> <div className="flex flex-col font-['Poppins:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[rgba(255,255,255,0.6)] text-center tracking-[0.28px] w-[756px]"data-node-id="302:428"> <p className="leading-[1.6] whitespace-pre-wrap">Thirumala Engineering Works is a trusted OEM partner, delivering forged and precision-machined components with end-to-end engineering solutions for industrial brands, all under one roof.</p> </div> </div> <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.1)] content-stretch flex flex-col items-start p-[4px] relative rounded-[18px] shrink-0"data-node-id="314:480"> <div className="content-stretch flex flex-col items-start relative rounded-[16px] shrink-0"data-name="Hero CTA"data-node-id="302:429"> <div className="bg-[#fe5200] border border-[#ffa880] border-solid content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[16px] shadow-[0px_4px_16px_0px_rgba(255,94,0,0.5)] shrink-0"data-node-id="I302:429;35:43"> <div className="flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white whitespace-nowrap"data-node-id="I302:429;35:44"> <p className="leading-[1.45]">Contact Us</p> </div> <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_-11px_16px_0px_rgba(255,243,237,0.3)]"/> </div> </div> </div> </div> </div> <div className="absolute left-[77px] overflow-clip size-[260px] top-[495px]"data-name="Hero Card image"data-node-id="302:430"> <div className="absolute h-[149px] left-[calc(50%+0.37px)] shadow-[6px_6px_8px_0px_rgba(255,94,0,0.1)] top-[calc(50%-0.37px)] translate-x-[-50%] translate-y-[-50%] w-[157px]"data-name="Hero Card 1 1"data-node-id="I302:430;52:334"> <img alt=""className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"src= {
-      img2
-    }
-
-    /> </div> <div className="absolute left-0 size-[130px] top-0"data-node-id="I302:430;52:330"/> <div className="absolute right-0 size-[130px] top-0"data-node-id="I302:430;52:331"/> <div className="absolute bottom-0 right-0 size-[130px]"data-node-id="I302:430;52:332"/> <div className="absolute bottom-0 left-0 size-[130px]"data-node-id="I302:430;52:333"/> </div> <HeroCardImage className="absolute left-[1126px] overflow-clip size-[260px] top-[445px]"/> </div> <div className="absolute h-[383px] left-1/2 top-[789px] translate-x-[-50%] w-[1552px]"data-node-id="302:432"> <div className="absolute inset-[-52.22%_-12.89%]"> <img alt=""className="block max-w-none size-full"src= {
-      imgEllipse4
-    }
-
-    /> </div> </div> <div className="absolute bg-[#f4f5f7] h-[124px] left-0 rounded-tl-[48px] rounded-tr-[48px] top-[900px] w-[1440px]"data-node-id="302:433"/> </div>);
+  return (
+    <div className="bg-black relative size-full" data-name="Hero Section" data-node-id="302:387">
+      <div className="absolute h-[900px] left-0 overflow-clip top-0 w-[1440px]" data-name="Hero" data-node-id="302:388">
+        <div className="absolute h-[900px] left-0 mix-blend-screen opacity-30 top-1/2 translate-y-[-50%] w-[1600px]" data-name="Bg" data-node-id="302:389">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBg} />
+        </div>
+        <div className="absolute content-stretch flex gap-[198px] items-center left-[calc(50%+0.5px)] top-[64px] translate-x-[-50%]" data-node-id="314:482">
+          <div className="content-stretch flex gap-[239px] items-center relative shrink-0" data-node-id="314:481">
+            <div className="bg-[rgba(255,255,255,0.1)] border-[1.5px] border-[rgba(255,255,255,0.1)] border-solid content-stretch flex items-center justify-center px-[10px] py-[12px] relative rounded-[20px] shrink-0" data-node-id="302:392">
+              <div className="flex flex-col font-['Inter:Black',sans-serif] font-black justify-center leading-[0] not-italic relative shrink-0 text-[#ff671f] text-[36px] tracking-[-4.32px] whitespace-nowrap" data-node-id="302:393">
+                <p className="leading-[normal]">TEW</p>
+              </div>
+            </div>
+            <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.04)] border border-[rgba(254,82,0,0.2)] border-solid content-stretch flex gap-[36px] items-center justify-center px-[26px] py-[12px] relative rounded-[26px] shrink-0" data-node-id="302:394">
+              <div className="content-stretch flex flex-col items-center relative shrink-0 w-[75px]" data-node-id="302:395">
+                <div className="content-stretch flex flex-col items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0 w-full" data-node-id="302:396">
+                  <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.8)] tracking-[0.96px] whitespace-nowrap" data-node-id="302:397">
+                    <p className="leading-[1.45]">Home</p>
+                  </div>
+                </div>
+                <NavIndicator className="h-[2px] relative shadow-[0px_1px_3px_0px_rgba(255,94,0,0.08)] shrink-0 w-full" />
+              </div>
+              <div className="content-stretch flex flex-col items-center relative shrink-0" data-node-id="302:399">
+                <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0 w-full" data-node-id="302:400">
+                  <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap" data-node-id="302:401">
+                    <p className="leading-[1.45]">Capabilities</p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-center relative shrink-0" data-node-id="302:403">
+                <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0" data-node-id="302:404">
+                  <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap" data-node-id="302:405">
+                    <p className="leading-[1.45]">About Us</p>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col items-center relative shrink-0" data-node-id="302:407">
+                <div className="content-stretch flex items-center justify-center px-[12px] py-[8px] relative rounded-[12px] shrink-0" data-node-id="302:408">
+                  <div className="flex flex-col font-['Bebas_Neue:Regular',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[24px] text-[rgba(255,255,255,0.3)] tracking-[0.96px] whitespace-nowrap" data-node-id="302:409">
+                    <p className="leading-[1.45]">Facilities</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] border-solid content-stretch flex flex-col items-start p-[9px] relative rounded-[24px] shrink-0" data-node-id="302:411">
+            <div className="content-stretch flex flex-col items-start relative rounded-[16px] shrink-0 w-full" data-name="Hero CTA" data-node-id="302:412">
+              <div className="bg-[#fe5200] border border-[#ffa880] border-solid content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[16px] shadow-[0px_4px_16px_0px_rgba(255,94,0,0.5)] shrink-0" data-node-id="I302:412;35:43">
+                <div className="flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white whitespace-nowrap" data-node-id="I302:412;35:44">
+                  <p className="leading-[1.45]">Contact Us</p>
+                </div>
+                <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_-11px_16px_0px_rgba(255,243,237,0.3)]" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute h-[771px] left-[calc(50%+2px)] top-[551px] translate-x-[-50%] w-[1156px]" data-name="BCO.f6e4e538-b622-40ec-88d0-28ce661f539c 1" data-node-id="302:413">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBcoF6E4E538B62240Ec88D028Ce661F539C1} />
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[8px] items-center left-[calc(50%-0.25px)] top-[218px] translate-x-[-50%] w-[1043.5px]" data-node-id="302:414">
+          <div className="bg-[rgba(255,93,18,0.25)] content-stretch flex gap-[10px] items-center justify-center px-[14px] py-[8px] relative rounded-[64px] shrink-0" data-node-id="302:415">
+            <Point className="relative shrink-0 size-[10px]" />
+            <div className="flex flex-col font-['Inter:Medium',sans-serif] font-medium justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[0.048px] whitespace-nowrap" data-node-id="302:417">
+              <p className="leading-[1.4]">#1 on OEM manufacturing</p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[36px] items-center relative shrink-0 w-full" data-node-id="302:418">
+            <div className="content-stretch flex flex-col gap-[12px] items-center relative shrink-0 w-full" data-node-id="302:419">
+              <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-full" data-node-id="302:420">
+                <div className="content-stretch flex gap-[18px] items-center justify-center relative shrink-0 w-full" data-node-id="302:421">
+                  <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap" data-node-id="302:422">
+                    <p className="leading-[1.6]">{`Complete `}</p>
+                  </div>
+                  <div className="content-stretch flex gap-[2.5px] items-center relative shrink-0" data-node-id="302:423">
+                    <div className="relative shrink-0 size-[38px]" data-name="Letter O" data-node-id="308:472">
+                      <div className="absolute bg-white inset-0 rounded-[100px]" data-node-id="I308:472;39:131" />
+                      <div className="absolute aspect-[34/34] contents left-[10.53%] right-[10.53%] top-1/2 translate-y-[-50%]" data-node-id="I308:472;39:135">
+                        <div className="absolute aspect-[400/225] left-[-28.2%] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[14.714px_2.098px] mask-size-[30px_30px] right-[-31.1%] top-[calc(50%-0.07px)] translate-y-[-50%]" data-name="videoplayback (2) 1" data-node-id="I308:472;39:133" style={{ maskImage: `url('${img}')` }}>
+                          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img1} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap" data-node-id="302:425">
+                      <p className="leading-[1.6]">EM</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-center text-white tracking-[0.46px] whitespace-nowrap" data-node-id="302:426">
+                    <p className="leading-[1.6]">Manufacturing Solutions</p>
+                  </div>
+                </div>
+                <div className="flex flex-col font-['Montserrat:ExtraBold',sans-serif] font-extrabold justify-center leading-[0] relative shrink-0 text-[46px] text-white tracking-[0.46px] whitespace-nowrap" data-node-id="302:427">
+                  <p className="leading-[1.6]">{` for Industrial Engineering Needs`}</p>
+                </div>
+              </div>
+              <div className="flex flex-col font-['Poppins:Medium',sans-serif] justify-center leading-[0] not-italic relative shrink-0 text-[14px] text-[rgba(255,255,255,0.6)] text-center tracking-[0.28px] w-[756px]" data-node-id="302:428">
+                <p className="leading-[1.6] whitespace-pre-wrap">Thirumala Engineering Works is a trusted OEM partner, delivering forged and precision-machined components with end-to-end engineering solutions for industrial brands, all under one roof.</p>
+              </div>
+            </div>
+            <div className="backdrop-blur-[4px] bg-[rgba(255,255,255,0.1)] content-stretch flex flex-col items-start p-[4px] relative rounded-[18px] shrink-0" data-node-id="314:480">
+              <div className="content-stretch flex flex-col items-start relative rounded-[16px] shrink-0" data-name="Hero CTA" data-node-id="302:429">
+                <div className="bg-[#fe5200] border border-[#ffa880] border-solid content-stretch flex items-center justify-center px-[16px] py-[12px] relative rounded-[16px] shadow-[0px_4px_16px_0px_rgba(255,94,0,0.5)] shrink-0" data-node-id="I302:429;35:43">
+                  <div className="flex flex-col font-['Inter:Bold',sans-serif] font-bold justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-white whitespace-nowrap" data-node-id="I302:429;35:44">
+                    <p className="leading-[1.45]">Contact Us</p>
+                  </div>
+                  <div className="absolute inset-0 pointer-events-none rounded-[inherit] shadow-[inset_0px_-11px_16px_0px_rgba(255,243,237,0.3)]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[77px] overflow-clip size-[260px] top-[495px]" data-name="Hero Card image" data-node-id="302:430">
+          <div className="absolute h-[149px] left-[calc(50%+0.37px)] shadow-[6px_6px_8px_0px_rgba(255,94,0,0.1)] top-[calc(50%-0.37px)] translate-x-[-50%] translate-y-[-50%] w-[157px]" data-name="Hero Card 1 1" data-node-id="I302:430;52:334">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img2} />
+          </div>
+          <div className="absolute left-0 size-[130px] top-0" data-node-id="I302:430;52:330" />
+          <div className="absolute right-0 size-[130px] top-0" data-node-id="I302:430;52:331" />
+          <div className="absolute bottom-0 right-0 size-[130px]" data-node-id="I302:430;52:332" />
+          <div className="absolute bottom-0 left-0 size-[130px]" data-node-id="I302:430;52:333" />
+        </div>
+        <HeroCardImage className="absolute left-[1126px] overflow-clip size-[260px] top-[445px]" />
+      </div>
+      <div className="absolute h-[383px] left-1/2 top-[789px] translate-x-[-50%] w-[1552px]" data-node-id="302:432">
+        <div className="absolute inset-[-52.22%_-12.89%]">
+          <img alt="" className="block max-w-none size-full" src={imgEllipse4} />
+        </div>
+      </div>
+      <div className="absolute bg-[#f4f5f7] h-[124px] left-0 rounded-tl-[48px] rounded-tr-[48px] top-[900px] w-[1440px]" data-node-id="302:433" />
+    </div>
+  );
 }
