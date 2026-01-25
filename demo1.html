@@ -9,11 +9,20 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@500&family=Inter:wght@700&display=swap"
     rel="stylesheet">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
     :root {
       --orange: #fe5200;
       --orange-2: #ff671f;
       --muted: #bdbdbd;
     }
+
+    .bebas-neue-regular {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
 
     html,
     body {
@@ -29,9 +38,11 @@
     }
 
     .nav {
+      position: relative;
       width: 100%;
-      display: inline-flex;
-      padding: 12px 26px;
+      padding-top: 50px;
+      padding-bottom: 77px;
+      display: flex;
       justify-content: center;
       align-items: center;
       gap: 198px;
@@ -104,11 +115,19 @@
     }
 
     .navlinks a {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.30);
+      font-family: "Bebas Neue";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 145%;
+      /* 34.8px */
+      letter-spacing: 0.96px;
       text-decoration: none;
-      font-family: Montserrat;
-      font-weight: 600;
-      letter-spacing: 1px;
+    }
+
+    .navlinks a:first-child {
+      color: white;
     }
 
     .contactus {
@@ -123,17 +142,27 @@
       backdrop-filter: blur(4px);
     }
 
+    .contactus :hover {
+      cursor: pointer;
+    }
+
     .cta-nav {
       display: flex;
       padding: 12px 20px;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      color: white;
+      font-weight: 800;
+      font-family: "Montserrat", sans-serif;
       border-radius: 16px;
       border: 1px solid #FFA880;
-      color: white;
       background: #FE5200;
       box-shadow: 0 -11px 16px 0 rgba(255, 243, 237, 0.30) inset;
+    }
+
+    .cta-nav:hover {
+      box-shadow: 0 4px 16px 0 rgba(255, 94, 0, 0.50);
     }
 
     .hero {
@@ -159,6 +188,7 @@
       z-index: 2;
       margin: 0 auto;
       text-align: center;
+      justify-content: center;
     }
 
     .badge {
@@ -198,8 +228,6 @@
       border-radius: 16px;
       border: 1px solid #FFA880;
       background: #FE5200;
-      box-shadow: 0 4px 16px 0 rgba(255, 94, 0, 0.50),
-        0 -11px 16px 0 rgba(255, 243, 237, 0.30) inset;
       color: #FFF;
       font-family: Montserrat;
       font-size: 18px;
@@ -207,6 +235,11 @@
       font-weight: 800;
       line-height: 145%;
       text-decoration: none;
+    }
+
+    .hero-cta:hover {
+      box-shadow: 0 4px 16px 0 rgba(255, 94, 0, 0.50),
+        0 -11px 16px 0 rgba(255, 243, 237, 0.30) inset;
     }
 
     .foreground {
@@ -231,7 +264,7 @@
     .foreground img {
       width: 100%;
       height: auto;
-      display: block;
+      display: flex;
     }
 
     .herogradient {
@@ -293,11 +326,12 @@
   <section class="hero" aria-label="Hero">
     <div class="bg" aria-hidden="true"></div>
     <div class="container">
-      <div class="badge">#1 on OEM manufacturing</div>
+      <div class="badge">
+        <img src="C:\Users\ygand\Downloads\dot.png" alt=""> #1 on OEM manufacturing</div>
       <h1>Complete OEM Manufacturing Solutions<br />for Industrial Engineering Needs</h1>
       <p class="lead">Thirumala Engineering Works is a trusted OEM partner, delivering forged and precision‑machined
         components with end‑to‑end engineering solutions for industrial brands, all under one roof.</p>
-      <a class="hero-cta" href="#capabilities">Explore Capabilities</a>
+        <a class="hero-cta" href="#capabilities">Explore Capabilities</a>
     </div>
     <div class="Image">
       <img src="C:\Users\ygand\Downloads\Hero Card image (1).png" alt="">
@@ -312,11 +346,6 @@
     </div>
     <div class="rounded-band" aria-hidden="true"></div>
   </section>
-
-  <!-- Asset references (expires in ~7 days):
-    bg: https://www.figma.com/api/mcp/asset/273bd9e4-5033-4a93-b111-a9dc2010fe0a
-    foreground: https://www.figma.com/api/mcp/asset/3ffa9a28-5ff6-4480-9402-2037c17e44e6
-  -->
 </body>
 
 </html>
