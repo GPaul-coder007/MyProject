@@ -1,0 +1,815 @@
+/* ============================================
+   THIRUMALA ENGINEERING - COMPLETE CSS
+   Professional OEM Manufacturing Landing Page
+   ============================================ */
+
+/* ============================================
+   1. FONTS & IMPORTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap');
+
+/* ============================================
+   2. CSS VARIABLES (Design System)
+   ============================================ */
+:root {
+    /* Colors */
+    --primary: #fe5200;
+    --primary-light: #ff6a1a;
+    --primary-dark: #ff5e00;
+    --dark: #2e2e2e;
+    --gray-100: #f5f5f5;
+    --gray-200: #e8e8e8;
+    --gray-300: #d0d0d0;
+    --gray-400: #999999;
+    --gray-500: #666666;
+    --gray-600: #4b4b4b;
+    --gray-700: #333333;
+    --white: #ffffff;
+    --black: #000000;
+    --bg-light: #fafafa;
+    
+    /* Fonts */
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-bebas: 'Bebas Neue', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-2xl: 32px;
+    --radius-full: 64px;
+    
+    /* Shadow */
+    --shadow-sm: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0px 4px 16px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0px 12px 32px rgba(0, 0, 0, 0.25);
+    --shadow-glow: 0px 4px 16px rgba(254, 82, 0, 0.5);
+    --shadow-glow-lg: 0px 8px 24px rgba(254, 82, 0, 0.7);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+/* ============================================
+   3. GLOBAL STYLES & RESET
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-poppins);
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+/* ============================================
+   4. TYPOGRAPHY
+   ============================================ */
+.font-montserrat {
+    font-family: var(--font-montserrat);
+}
+
+.font-poppins {
+    font-family: var(--font-poppins);
+}
+
+.font-inter {
+    font-family: var(--font-inter);
+}
+
+.font-bebas {
+    font-family: var(--font-bebas);
+}
+
+/* Font Weights */
+.font-light { font-weight: 300; }
+.font-normal { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.font-extrabold { font-weight: 800; }
+.font-black { font-weight: 900; }
+
+/* Font Sizes */
+h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* ============================================
+   5. LAYOUT UTILITIES
+   ============================================ */
+.max-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section-padding {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+    .section-padding {
+        padding-top: var(--spacing-2xl);
+        padding-bottom: var(--spacing-2xl);
+    }
+    
+    h1 { font-size: 36px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 24px; }
+}
+
+/* ============================================
+   6. HERO SECTION
+   ============================================ */
+.hero-bg {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 94, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    animation: pulse-glow 4s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    color: var(--white);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-montserrat);
+}
+
+.hero-content p {
+    color: var(--gray-400);
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+/* ============================================
+   7. NAVIGATION
+   ============================================ */
+.nav-container {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--spacing-lg);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.logo-box {
+    padding: 8px 12px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.logo-text {
+    font-family: var(--font-inter);
+    font-weight: 900;
+    font-size: 24px;
+    color: #ff671f;
+    letter-spacing: -2px;
+}
+
+.nav-links {
+    display: none;
+    gap: var(--spacing-xl);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(254, 82, 0, 0.2);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 32px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-family: var(--font-bebas);
+    font-size: 18px;
+    letter-spacing: 1px;
+    opacity: 0.3;
+    transition: opacity var(--transition-base);
+}
+
+.nav-links a:first-child {
+    opacity: 1;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--primary-light);
+}
+
+@media (min-width: 768px) {
+    .nav-links { display: flex; }
+}
+
+/* ============================================
+   8. BUTTONS
+   ============================================ */
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px 24px;
+    border-radius: var(--radius-lg);
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--font-montserrat);
+    font-size: 16px;
+    box-shadow: var(--shadow-glow);
+    transition: all var(--transition-base);
+    border: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow-lg);
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.feature-card-btn {
+    background: var(--primary);
+    color: var(--white);
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.feature-card-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   9. BADGES
+   ============================================ */
+.badge-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    background-color: rgba(255, 93, 18, 0.1);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.048px;
+    color: var(--dark);
+}
+
+.badge-primary::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--primary), rgba(255, 94, 0, 0.6));
+    flex-shrink: 0;
+}
+
+/* ============================================
+   10. STAT CARDS
+   ============================================ */
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 94, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+.stat-content h3 {
+    color: var(--primary);
+    font-family: var(--font-montserrat);
+    font-size: 36px;
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-content p {
+    color: var(--gray-500);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ============================================
+   11. FEATURE CARDS
+   ============================================ */
+.feature-card {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-base);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.feature-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.feature-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+}
+
+.feature-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
+    pointer-events: none;
+}
+
+.feature-card-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card h3 {
+    font-family: var(--font-montserrat);
+    font-size: 20px;
+    color: var(--dark);
+    margin-bottom: var(--spacing-md);
+}
+
+.feature-card p {
+    color: var(--gray-500);
+    font-size: 14px;
+    margin-bottom: var(--spacing-lg);
+    flex: 1;
+}
+
+/* ============================================
+   12. TESTIMONIAL CARDS
+   ============================================ */
+.testimonial-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    position: relative;
+    transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.testimonial-quote {
+    font-size: 48px;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.3;
+}
+
+.testimonial-text h4 {
+    font-family: var(--font-montserrat);
+    color: var(--dark);
+    margin-bottom: var(--spacing-md);
+    font-size: 18px;
+}
+
+.testimonial-text p {
+    color: var(--gray-500);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-lg);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--gray-200);
+}
+
+.testimonial-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-family: var(--font-montserrat);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.testimonial-author > div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-author-name {
+    font-family: var(--font-poppins);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--dark);
+    letter-spacing: -0.064px;
+}
+
+.testimonial-author-role {
+    font-family: var(--font-poppins);
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(46, 46, 46, 0.4);
+    letter-spacing: -0.048px;
+}
+
+/* ============================================
+   13. FAQ SECTION
+   ============================================ */
+details {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+details:hover {
+    border-color: var(--primary);
+}
+
+details[open] {
+    border-color: var(--primary);
+    background: rgba(255, 94, 0, 0.02);
+}
+
+summary {
+    font-family: var(--font-montserrat);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details > p {
+    color: var(--gray-600);
+    margin-top: var(--spacing-lg);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ============================================
+   14. FORM STYLES
+   ============================================ */
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-lg);
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    color: var(--dark);
+    transition: border-color var(--transition-fast);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+    color: var(--gray-400);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(254, 82, 0, 0.1);
+}
+
+/* ============================================
+   15. FOOTER
+   ============================================ */
+footer {
+    background: var(--black);
+    color: var(--white);
+}
+
+footer a {
+    color: var(--gray-400);
+    transition: color var(--transition-fast);
+}
+
+footer a:hover {
+    color: var(--primary);
+}
+
+footer h4 {
+    color: var(--white);
+    font-size: 18px;
+    margin-bottom: var(--spacing-lg);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    font-size: 14px;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+footer p {
+    color: var(--gray-400);
+    font-size: 14px;
+}
+
+/* ============================================
+   16. COLOR UTILITIES
+   ============================================ */
+.primary-orange { color: var(--primary); }
+.bg-orange { background-color: var(--primary); }
+.border-orange { border-color: var(--primary); }
+.text-dark { color: var(--dark); }
+.text-gray { color: var(--gray-500); }
+.text-white { color: var(--white); }
+
+/* ============================================
+   17. GRADIENT UTILITIES
+   ============================================ */
+.gradient-primary {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.gradient-dark {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+}
+
+.hero-gradient {
+    background: linear-gradient(-0.14deg, rgba(255, 255, 255, 0) 0.61%, rgba(255, 94, 0, 0.3) 99.39%);
+}
+
+/* ============================================
+   18. RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .max-container {
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    
+    .hero-content {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .stat-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .section-padding {
+        padding-top: var(--spacing-2xl);
+        padding-bottom: var(--spacing-2xl);
+    }
+    
+    details {
+        padding: var(--spacing-md);
+    }
+    
+    summary {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    
+    .btn-primary {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .section-padding {
+        padding-top: var(--spacing-xl);
+        padding-bottom: var(--spacing-xl);
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+    }
+}
+
+/* ============================================
+   19. UTILITY CLASSES
+   ============================================ */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 4px; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.gap-6 { gap: 24px; }
+.gap-8 { gap: 32px; }
+.gap-12 { gap: 48px; }
+.mb-4 { margin-bottom: 16px; }
+.mb-6 { margin-bottom: 24px; }
+.mb-8 { margin-bottom: 32px; }
+.mb-12 { margin-bottom: 48px; }
+.mt-4 { margin-top: 16px; }
+.mt-8 { margin-top: 32px; }
+.mt-12 { margin-top: 48px; }
+.px-4 { padding: 0 16px; }
+.py-16 { padding: 64px 0; }
+.w-full { width: 100%; }
+.max-w-3xl { max-width: 768px; }
+.max-w-4xl { max-width: 896px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.space-y-4 > * + * { margin-top: 16px; }
+.space-y-6 > * + * { margin-top: 24px; }
+
+/* ============================================
+   20. ANIMATIONS
+   ============================================ */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideInUp {
+    animation: slideInUp 0.6s ease-out;
+}
