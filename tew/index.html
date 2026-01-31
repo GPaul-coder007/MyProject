@@ -4,382 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thirumala Engineering - Complete OEM Manufacturing Solutions</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap");
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        color: #2e2e2e;
-        line-height: 1.6;
-      }
-
-      .font-montserrat {
-        font-family: "Montserrat", sans-serif;
-      }
-      .font-bebas {
-        font-family: "Bebas Neue", sans-serif;
-      }
-      .font-inter {
-        font-family: "Inter", sans-serif;
-      }
-
-      .hero-bg {
-        background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-bg::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(
-          circle at 50% 50%,
-          rgba(255, 94, 0, 0.1) 0%,
-          transparent 50%
-        );
-        pointer-events: none;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 10;
-      }
-
-      .primary-orange {
-        color: #fe5200;
-      }
-      .bg-orange {
-        background-color: #fe5200;
-      }
-      .border-orange {
-        border-color: #ff5e00;
-      }
-      .text-dark {
-        color: #2e2e2e;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, #fe5200 0%, #ff6a1a 100%);
-        padding: 12px 24px;
-        border-radius: 16px;
-        color: white;
-        font-weight: 700;
-        font-family: "Montserrat", sans-serif;
-        border: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0px 4px 16px rgba(255, 94, 0, 0.5);
-        font-size: 16px;
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-2px);
-        box-shadow: 0px 8px 24px rgba(255, 94, 0, 0.7);
-      }
-
-      .badge-primary {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 14px;
-        border-radius: 64px;
-        background-color: rgba(255, 93, 18, 0.1);
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.048px;
-      }
-
-      .badge-primary::before {
-        content: "";
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: radial-gradient(circle, #ff5e00, rgba(255, 94, 0, 0.6));
-      }
-
-      .stat-card {
-        display: flex;
-        gap: 16px;
-        padding: 16px;
-      }
-
-      .stat-icon {
-        width: 78px;
-        height: 78px;
-        border-radius: 12px;
-        background: rgba(255, 94, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 36px;
-        flex-shrink: 0;
-      }
-
-      .stat-content h3 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 40px;
-        color: #ff5e00;
-        line-height: 1.15;
-        margin-bottom: 4px;
-      }
-
-      .stat-content p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        color: rgba(0, 0, 0, 0.6);
-        letter-spacing: 0.064px;
-      }
-
-      .feature-card {
-        background: #2e2222;
-        border-radius: 24px;
-        overflow: hidden;
-        color: white;
-        transition: transform 0.3s ease;
-        height: 500px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-8px);
-      }
-
-      .feature-card-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-      }
-
-      .feature-card-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 280px;
-        background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
-        z-index: 2;
-      }
-
-      .feature-card-content {
-        position: relative;
-        z-index: 3;
-        padding: 24px;
-      }
-
-      .feature-card h3 {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 800;
-        font-size: 30px;
-        margin-bottom: 12px;
-        line-height: 1.2;
-      }
-
-      .feature-card p {
-        font-size: 12px;
-        color: rgba(255, 255, 255, 0.6);
-        margin-bottom: 16px;
-        line-height: 1.4;
-      }
-
-      .feature-card-btn {
-        background: rgba(254, 82, 0, 0.2);
-        border: 1px solid #ffa880;
-        padding: 12px 16px;
-        border-radius: 16px;
-        color: white;
-        cursor: pointer;
-        font-weight: 700;
-        font-family: "Montserrat", sans-serif;
-        font-size: 18px;
-        transition: all 0.3s ease;
-      }
-
-      .feature-card-btn:hover {
-        background: rgba(254, 82, 0, 0.3);
-      }
-
-      .testimonial-card {
-        background: rgba(255, 243, 237, 0.2);
-        border: 1px solid rgba(255, 94, 0, 0.3);
-        border-radius: 16px;
-        padding: 16px;
-        margin-bottom: 20px;
-      }
-
-      .testimonial-quote {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 700;
-        font-size: 48px;
-        color: #ff5e00;
-        line-height: 1.6;
-        margin-bottom: 16px;
-      }
-
-      .testimonial-text h4 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 700;
-        font-size: 24px;
-        color: #2e2e2e;
-        line-height: 1.4;
-        margin-bottom: 12px;
-        letter-spacing: -0.096px;
-      }
-
-      .testimonial-text p {
-        font-family: "Poppins", sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        color: rgba(46, 46, 46, 0.7);
-        line-height: 1.4;
-      }
-
-      .testimonial-author {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        margin-top: 16px;
-      }
-
-      .testimonial-avatar {
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        background: white;
-        border: 1px solid rgba(46, 46, 46, 0.1);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        color: #ff5e00;
-        font-size: 18px;
-      }
-
-      .section-padding {
-        padding: 80px 20px;
-      }
-      .max-container {
-        max-width: 1440px;
-        margin: 0 auto;
-      }
-
-      .gradient-text {
-        background: linear-gradient(135deg, #fe5200 0%, #ff6a1a 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .letter-o {
-        width: 38px;
-        height: 38px;
-        /* perfect circle */
-        border-radius: 50%;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        background: #fff;
-        transition:
-          width 0.45s ease,
-          border-radius 0.45s ease;
-      }
-
-      /* background/video/image */
-      .mask-layer {
-        position: absolute;
-        inset: 7%;
-        border-radius: 24px;
-        background-image: url("/OEM.png");
-        background-size: cover;
-        background-position: center;
-      }
-      .certificate img {
-        width: 150px;
-        margin-right: 20px;
-        float: left;
-      }
-      .certificate img :hover {
-        animation: float 3s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(-30px);
-        }
-      }
-
-      /* HOVER → oval shape */
-      .letter-o:hover {
-        width: 80px;
-        /* stretch horizontally */
-        border-radius: 30px;
-        /* keeps pill shape smooth */
-      }
-      #get-quote {
-        background-color: #000000;
-        color: white;
-      }
-      .cont-act-btn {
-        max-width: fit-content;
-        display: flex;
-        padding: 9px;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 94, 0, 0.05);
-        backdrop-filter: blur(4px);
-      }
-      .badge {
-        display: inline-block;
-        border-radius: 40px;
-        color: #fff;
-      }
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 40px 16px;
-        }
-        .feature-card h3 {
-          font-size: 24px;
-        }
-        .stat-content h3 {
-          font-size: 32px;
-        }
-      }
-    </style>
   </head>
+
   <body class="bg-white">
     <!-- HERO SECTION -->
     <section class="hero-bg min-h-screen flex items-center justify-center">
@@ -409,15 +37,17 @@
             forged and precision-machined components with end-to-end engineering
             solutions for industrial brands, all under one roof.
           </p>
-
-          <div class="certificate">
-            <!--- floating certificate images-->
-            <img src="/hero card-1.png" alt="example image" />
-            <img src="/recog.png" alt="exaple img" />
-          </div>
-
-          <!-- CTA Button -->
           <button class="btn-primary mb-16">Explore Capabilities</button>
+          <section id="certificate">
+            <!--- floating certificate images-->
+            <div>
+              <img src="/hero card-1.png" alt="example image" />
+            </div>
+            <div>
+              <img src="/recog.png" alt="exaple img" />
+            </div>
+          </section>
+          <!-- CTA Button -->
         </div>
       </div>
 
@@ -440,6 +70,7 @@
 
           <!-- Nav Links -->
           <div
+            id="nav-hero-sec"
             style="
               background: rgba(255, 255, 255, 0.04);
               border: 1px solid rgba(254, 82, 0, 0.2);
@@ -526,64 +157,138 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="section-padding bg-white" >
-      <div class="max-container">
-        <div class="max-w-3xl">
-          <!-- Badge -->
-          <span class="badge-primary block w-fit mb-6">
-            <img class="badge" src="dot.png" alt="123" /> About Thirumala
-          </span>
+    <section class="section-padding bg-white">
+      <section class="bg-white py-20">
+        <div
+          class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+        >
+          <!-- LEFT SIDE -->
+          <div class="max-w-2xl">
+            <!-- badge -->
+            <span
+              class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-2 rounded-full mb-6"
+            >
+              <img src="dot.png" class="w-2 h-2" />
+              About Thirumala
+            </span>
 
-          <!-- Heading -->
-          <h2
-            class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900 mb-8"
-          >
-            Your Reliable OEM Manufacturing Partner
-          </h2>
+            <!-- heading -->
+            <h2
+              class="text-4xl lg:text-5xl font-bold leading-tight text-gray-900 mb-6"
+            >
+              Your Reliable OEM Manufacturing Partner
+            </h2>
 
-          <!-- Content -->
-          <div class="space-y-6 text-gray-700 text-lg leading-relaxed">
-            <p>
-              Thirumala Engineering Works is a complete OEM manufacturing
-              company built to serve industries that require precision, scale,
-              and consistency. We specialize in delivering high-quality forged
-              and machined components for engineering brands, manufacturers, and
-              industrial enterprises.
-            </p>
-            <p>
-              With a fully equipped in-house infrastructure of forging units,
-              machining facilities, and quality control systems, we offer
-              end-to-end manufacturing under one roof reducing dependency, lead
-              time, and operational risk for our clients.
-            </p>
-            <div class="about-img">
-              <img
-                src="/about-vid.gif"
-                alt="about-video"
-                style="
-                  width: 100%;
-                  height: auto;
-                  border-radius: 16px;
-                  margin-top: 20px;
-                "
-              />
+            <!-- description -->
+            <div class="space-y-5 text-gray-600 text-lg leading-relaxed">
+              <p>
+                Thirumala Engineering Works delivers forged and machined
+                components with precision and consistency for engineering brands
+                and manufacturers.
+              </p>
+
+              <p>
+                In house forging, machining, and quality systems reduce lead
+                time and risk.
+              </p>
+            </div>
+
+            <!-- CTA -->
+            <button
+              class="mt-10 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-md transition"
+            >
+              Know Us More
+            </button>
+
+            <!-- clients -->
+            <div class="mt-12">
+              <p class="text-sm font-semibold text-gray-800 mb-4">
+                100+ MANUFACTURING CLIENTS
+              </p>
+
+              <div class="flex items-center gap-6 flex-wrap">
+                <img
+                  src="/client1.png"
+                  class="h-10 opacity-80 hover:opacity-100 transition"
+                />
+                <img
+                  src="/client2.png"
+                  class="h-10 opacity-80 hover:opacity-100 transition"
+                />
+                <img
+                  src="/client3.png"
+                  class="h-10 opacity-80 hover:opacity-100 transition"
+                />
+                <img
+                  src="/client4.png"
+                  class="h-10 opacity-80 hover:opacity-100 transition"
+                />
+                <img
+                  src="/client5.png"
+                  class="h-10 opacity-80 hover:opacity-100 transition"
+                />
+              </div>
             </div>
           </div>
 
-          <!-- CTA -->
-          <button class="btn-primary mt-12">Know Us More...</button>
-          <div>
-            <p>100+ MANUFACTURING CLIENTS</p>
-            <img src="/client1.png" alt="Client 1" /><img
-              src="/client2.png"
-              alt="Client 2"
-            /><img src="/client3.png" alt="Client 3" /><img
-              src="/client4.png"
-              alt="Client 4"
-            /><img src="/client5.png" alt="Client 5" />
+          <!-- RIGHT SIDE -->
+          <div class="relative w-full max-w-2xl ml-auto">
+            <!-- main image -->
+            <img
+              src="/about-vid.gif"
+              class="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+            />
+
+            <!-- experience badge -->
+            <img
+              src="5f6558b074cd3c70b5a68ae2fac733ccbaed8f38.png"
+              class="absolute -top-12 -right-12 w-32"
+            />
+
+            <!-- Employee card -->
+            <div
+              class="group absolute top-8 -left-10 bg-white rounded-2xl shadow-lg px-5 py-4 w-56 cursor-pointer hover:shadow-xl transition"
+            >
+              <div class="flex items-center gap-3">
+                <img src="Frame.svg" class="w-8 h-8" />
+                <div>
+                  <p class="font-bold text-lg">25,000+</p>
+                  <p class="text-sm text-gray-500">Employee</p>
+                </div>
+              </div>
+
+              <p
+                class="text-sm text-gray-600 mt-2 max-h-0 overflow-hidden opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-300"
+              >
+                Skilled Workforce Across Operations
+              </p>
+            </div>
+
+            <!-- Location card -->
+            <div
+              class="group absolute -bottom-10 right-10 bg-white rounded-2xl shadow-lg px-6 py-4 w-64 cursor-pointer hover:shadow-xl transition"
+            >
+              <div class="flex items-center gap-3">
+                <img
+                  src="ae76fea622e8df21407436828b64d102152960a7.png"
+                  class="w-7 h-7"
+                />
+                <div>
+                  <p class="font-bold text-lg">15+</p>
+                  <p class="text-sm text-gray-500">Location</p>
+                </div>
+              </div>
+
+              <p
+                class="text-sm text-gray-600 mt-2 max-h-0 overflow-hidden opacity-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-300"
+              >
+                Wide Industrial Presence Across Regions
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
       <marquee behavior="scroll" direction="left" scrollamount="10">
         <img
           src="/mar1.png"
@@ -648,7 +353,8 @@
         <!-- Section Header -->
         <div class="text-center mb-16">
           <span class="badge-primary block w-fit mb-4 mx-auto">
-            <img class="badge" src="dot.png" alt="example" /> Manufacturing Capabilities</span>
+            <img class="badge" src="dot.png" alt="example" /> Manufacturing
+            Capabilities
           </span>
           <h2
             class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900"
@@ -671,7 +377,10 @@
                 font-size: 80px;
               "
             >
-              🔥
+              <img
+                src="istockphoto-875273138-170667a 1.png"
+                alt="hot-forging-icon"
+              />
             </div>
             <div class="feature-card-overlay"></div>
             <div class="feature-card-content">
@@ -696,7 +405,10 @@
                 font-size: 80px;
               "
             >
-              ⚙️
+              <img
+                src="Macfab-Manufacturing 1.png"
+                alt="Macfab-Manufacturing-icon"
+              />
             </div>
             <div class="feature-card-overlay"></div>
             <div class="feature-card-content">
@@ -711,17 +423,11 @@
 
           <!-- Card 3: Custom -->
           <div class="feature-card">
-            <div
-              class="feature-card-image"
-              style="
-                background: linear-gradient(135deg, #6b7280, #4b5563);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 80px;
-              "
-            >
-              🛠️
+            <div class="feature-card-image">
+              <img
+                src="BCO.a4c0848e-e23e-4ebd-9675-6fe52581b67f 1.png"
+                alt="BCO-icon"
+              />
             </div>
             <div class="feature-card-overlay"></div>
             <div class="feature-card-content">
@@ -738,252 +444,209 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="section-padding bg-white">
-      <div class="max-container">
-        <!-- Section Header -->
+    <section class="py-24 bg-white overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
         <div class="text-center mb-16">
-          <span class="badge-primary block w-fit mb-4 mx-auto">
-           <img class="badge" src="dot.png" alt="badge" /> TESTIMONIALS</span>
-          </span>
-          <h2
-            class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900"
+          <span
+            class="inline-flex items-center gap-2 bg-orange-50 text-orange-600 text-sm font-semibold px-4 py-2 rounded-full mb-4"
           >
+            <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+            TESTIMONIALS
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
             Trusted by Leading Industrial Brands
           </h2>
         </div>
 
-        <!-- Testimonials Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Testimonial 1 -->
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              <h4>A manufacturing partner we can rely on.</h4>
-              <p>
-                Working with Thirumala has simplified our sourcing process.
-                Their ability to handle forging and machining under one roof has
-                reduced lead times and improved production consistency.
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">TE</div>
-              <div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 600;
-                    font-size: 16px;
-                    color: #2e2e2e;
-                    letter-spacing: -0.064px;
-                  "
-                >
-                  Tata Engineering
+        <!-- Infinite Scroll Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 h-[520px]">
+          <!-- LEFT (Scroll Down) -->
+          <div class="relative overflow-hidden">
+            <div class="flex flex-col gap-6 animate-scroll-down">
+              <!-- Duplicate cards for infinite effect -->
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>A manufacturing partner we can rely on.</h4>
+                  <p>
+                    Working with Thirumala has simplified our sourcing process.
+                    Their ability to handle forging and machining under one roof
+                    has reduced lead times and improved production consistency.
+                  </p>
                 </div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 500;
-                    font-size: 12px;
-                    color: rgba(46, 46, 46, 0.4);
-                    letter-spacing: -0.048px;
-                  "
-                >
-                  OEM Manufacturing Partner
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">TE</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      Tata Engineering
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      OEM Manufacturing Partner
+                    </div>
+                  </div>
                 </div>
               </div>
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
+
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
             </div>
           </div>
 
-          <!-- Testimonial 2 -->
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              <h4>Exceptional quality and reliability.</h4>
-              <p>
-                Thirumala's commitment to quality and on-time delivery has made
-                them an invaluable partner for our manufacturing needs. Highly
-                recommended!
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">L&T</div>
-              <div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 600;
-                    font-size: 16px;
-                    color: #2e2e2e;
-                    letter-spacing: -0.064px;
-                  "
-                >
-                  L&T India
-                </div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 500;
-                    font-size: 12px;
-                    color: rgba(46, 46, 46, 0.4);
-                    letter-spacing: -0.048px;
-                  "
-                >
-                  Industrial Partner
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- RIGHT (Scroll Up) -->
+          <div class="relative overflow-hidden">
+            <div class="flex flex-col gap-6 animate-scroll-up">
+              <!-- Duplicate cards -->
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
 
-          <!-- Testimonial 3 -->
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              <h4>Complete manufacturing excellence.</h4>
-              <p>
-                From design consultation to final delivery, Thirumala provides
-                end-to-end solutions that reduce our operational complexity and
-                costs significantly.
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">Bajaj</div>
-              <div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 600;
-                    font-size: 16px;
-                    color: #2e2e2e;
-                    letter-spacing: -0.064px;
-                  "
-                >
-                  Bajaj Auto
-                </div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 500;
-                    font-size: 12px;
-                    color: rgba(46, 46, 46, 0.4);
-                    letter-spacing: -0.048px;
-                  "
-                >
-                  Automotive Partner
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 4 -->
-          <div class="testimonial-card">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              <h4>Best-in-class manufacturing partner.</h4>
-              <p>
-                The technical expertise and production capabilities of Thirumala
-                have enabled us to expand our product lines with confidence and
-                reliability.
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar">TVS</div>
-              <div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 600;
-                    font-size: 16px;
-                    color: #2e2e2e;
-                    letter-spacing: -0.064px;
-                  "
-                >
-                  TVS Motors
-                </div>
-                <div
-                  style="
-                    font-family: &quot;Poppins&quot;, sans-serif;
-                    font-weight: 500;
-                    font-size: 12px;
-                    color: rgba(46, 46, 46, 0.4);
-                    letter-spacing: -0.048px;
-                  "
-                >
-                  Manufacturing Partner
-                </div>
-              </div>
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">...</div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <hr />
-    <section id="get-quote">
-      <h3>Select Manufacturing Requirement</h3>
-      <section>
-        <input type="radio" name="sel-one" id="hot-forging" />
-        <label for="sel-one">Hot Forging Components</label>
-        <input type="radio" name="sel-one" id="machined-components" />
-        <label for="sel-one">Machined Components</label>
-        <input type="radio" name="sel-one" id="custom-oem" />
-        <label for="sel-one">Custom OEM Solutions</label>
-      </section>
-      <div id="get-quote-container">
-        <div class="flex justify-center mb-8">
-          <span class="badge-primary">Get a Quote</span>
+    <section class="bg-black text-white py-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- RADIO HEADER -->
+        <div class="text-center mb-16">
+          <h3 class="text-xl font-semibold mb-8">
+            Select Manufacturing Requirement
+          </h3>
+
+          <div class="flex justify-center gap-12 text-sm text-gray-300">
+            <label class="custom-radio cursor-pointer flex items-center">
+              <input type="radio" name="manufacturing" checked />
+              <span class="flex items-center"> Hot Forging Components </span>
+            </label>
+
+            <label class="custom-radio cursor-pointer flex items-center">
+              <input type="radio" name="manufacturing" />
+              <span class="flex items-center"> Machined Components </span>
+            </label>
+
+            <label class="custom-radio cursor-pointer flex items-center">
+              <input type="radio" name="manufacturing" />
+              <span class="flex items-center"> Custom OEM Solutions </span>
+            </label>
+          </div>
         </div>
-        Hot Forging Manufacturing Quote.
-        <p>
-          Request high-strength forged components in steel, brass, aluminum, or
-          copper — built for industrial durability and performance.
-        </p>
-        <div class="cont-act-btn">
-          <p>
-            “Have questions before submitting?<br />Talk to our engineering
-            team”
-          </p>
-          <button class="btn-primary w-full">Contact Us</button>
-        </div>
-        <div id="quote-form" class="flex flex-col justify-center">
-          <form action="#" method="get" class="space-y-4">
-            <label name="company">Company Name</label>
-            <input
+
+        <!-- MAIN GRID -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <!-- LEFT CONTENT -->
+          <div>
+            <span
+              class="inline-block bg-orange-500/10 text-orange-500 text-sm font-semibold px-4 py-2 rounded-full mb-6"
+            >
+              Get a Quote
+            </span>
+
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Hot Forging <br />Manufacturing Quote
+            </h2>
+
+            <p class="text-gray-400 leading-relaxed max-w-md mb-10">
+              Request high-strength forged components in steel, brass, aluminum,
+              or copper — built for industrial durability and performance.
+            </p>
+
+            <div
+              class="bg-gradient-to-br from-orange-500/20 to-orange-600/5 border border-orange-500/30 rounded-2xl p-6 max-w-sm"
+            >
+              <p class="text-sm text-gray-300 mb-4">
+                “Have questions before submitting?<br />
+                Talk to our engineering team”
+              </p>
+              <button
+                class="w-full bg-orange-500 hover:bg-orange-600 transition text-white font-semibold py-3 rounded-xl"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+
+          <!-- RIGHT FORM -->
+          <div class="bg-black/60 border border-white/10 rounded-2xl p-10">
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm mb-2">Company Name</label>
+                <input
                   type="text"
                   placeholder="e.g., ABC Engineering Pvt. Ltd."
-                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
-                  required
-                /><br />
-            <label name="company">Full Name</label>
+                  class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-2">Full Name</label>
                 <input
                   type="text"
                   placeholder="e.g., Ramesh Kumar"
-                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
-                  required
-                /><br />
-            <label name="company">Business Email</label>
+                  class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-2">Business Email</label>
                 <input
                   type="email"
                   placeholder="e.g., ramesh@company.com"
-                  class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
-                  required
-                /><br />
-            <label name="company">Phone Number</label>
-            <input
+                  class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-2">Phone Number</label>
+                <input
                   type="tel"
                   placeholder="e.g., 9876543210"
-                  class="w-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
-                  required
-                /><br />
-            <label name="company">Enter City / State / Country</label>
-            <input
-                  type="tel"
+                  class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm mb-2">
+                  Enter City / State / Country
+                </label>
+                <input
+                  type="text"
                   placeholder="e.g., Chennai, Tamil Nadu, India"
-                  class="w-fit px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500"
-                  required
-                />          <br />
-            <button type="submit" class="btn-primary">
-              Get Your Quotation Now
-            </button>
-          </form>
+                  class="w-full bg-black border border-white/20 rounded-xl px-4 py-3 focus:outline-none focus:border-orange-500"
+                />
+              </div>
+
+              <button
+                class="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:opacity-90 transition text-white font-semibold py-4 rounded-xl mt-6"
+              >
+                Get Your Quotation Now
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -1000,14 +663,15 @@
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  What industries do you serve?
+                What industries do you serve?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                    We serve automotive, industrial machinery, heavy engineering, and OEM manufacturing sectors.
+                We serve automotive, industrial machinery, heavy engineering,
+                and OEM manufacturing sectors.
               </p>
             </details>
 
@@ -1017,14 +681,15 @@
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  Do you provide custom manufacturing?
+                Do you provide custom manufacturing?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-               Yes. We manufacture components based on customer drawings, specifications, and OEM requirements.
+                Yes. We manufacture components based on customer drawings,
+                specifications, and OEM requirements.
               </p>
             </details>
 
@@ -1034,14 +699,15 @@
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  What materials do you forge?
+                What materials do you forge?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                We forge steel, brass, aluminum, and copper based on application needs.
+                We forge steel, brass, aluminum, and copper based on application
+                needs.
               </p>
             </details>
 
@@ -1051,78 +717,85 @@
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  What is your production capacity?
+                What is your production capacity?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                We support both small batch and high-volume production with scalable manufacturing facilities.
+                We support both small batch and high-volume production with
+                scalable manufacturing facilities.
               </p>
             </details>
-                        <details
+            <details
               class="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer group"
             >
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  Do you follow quality standards?
+                Do you follow quality standards?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                Yes. Our processes follow ISO-certified quality systems and strict inspection protocols.
+                Yes. Our processes follow ISO-certified quality systems and
+                strict inspection protocols.
               </p>
             </details>
-                        <details
+            <details
               class="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer group"
             >
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  How can I request a quote?
+                How can I request a quote?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                Select the required capability in the quotation form and submit your technical details.
+                Select the required capability in the quotation form and submit
+                your technical details.
               </p>
             </details>
-                        <details
+            <details
               class="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer group"
             >
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  Do you support prototype runs?
+                Do you support prototype runs?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                Yes. We support prototype, pilot, and pre-production runs to help validate designs before moving into full-scale manufacturing.
+                Yes. We support prototype, pilot, and pre-production runs to
+                help validate designs before moving into full-scale
+                manufacturing.
               </p>
             </details>
-                        <details
+            <details
               class="bg-white border border-gray-200 rounded-xl p-6 cursor-pointer group"
             >
               <summary
                 class="font-montserrat font-bold text-xl text-gray-900 flex justify-between items-center"
               >
-                  How do you ensure manufacturing quality?
+                How do you ensure manufacturing quality?
                 <span
                   class="text-2xl group-open:rotate-180 transition-transform"
                   >+</span
                 >
               </summary>
               <p class="text-gray-600 mt-4">
-                We follow standardized manufacturing processes, in-house quality checks, and inspection procedures to ensure consistent output across every production batch.
+                We follow standardized manufacturing processes, in-house quality
+                checks, and inspection procedures to ensure consistent output
+                across every production batch.
               </p>
             </details>
           </div>
@@ -1135,7 +808,10 @@
               Answers You Can Trust
             </h2>
             <p class="text-gray-600 text-lg leading-relaxed">
-              Clear answers to common questions about our OEM manufacturing capabilities, end-to-end processes, quality assurance practices, and how we work as a reliable manufacturing partner for industrial businesses.
+              Clear answers to common questions about our OEM manufacturing
+              capabilities, end-to-end processes, quality assurance practices,
+              and how we work as a reliable manufacturing partner for industrial
+              businesses.
             </p>
           </div>
         </div>
@@ -1151,22 +827,23 @@
             <div>
               <span class="badge-primary w-fit mb-6"> Next Step </span>
               <h2 class="font-montserrat font-bold text-4xl text-gray-900 mb-4">
-                      You’re Clear on the Process.
-                      Let’s Apply It.
+                You’re Clear on the Process. Let’s Apply It.
               </h2>
               <p class="text-gray-600 text-lg leading-relaxed mb-8">
-                Share your component details with confidence, choose the right manufacturing category, provide inputs, and we’ll handle the rest with precision.
+                Share your component details with confidence, choose the right
+                manufacturing category, provide inputs, and we’ll handle the
+                rest with precision.
               </p>
             </div>
 
             <!-- Right CTA -->
             <div class="flex flex-col justify-center">
-                            <p class="text-gray-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Takes only a few minutes to submit.
               </p>
-                <button target="#quote-form" class="btn-primary w-full">
-                      Share Your Requirement
-                </button>
+              <button target="#quote-form" class="btn-primary w-full">
+                Share Your Requirement
+              </button>
             </div>
           </div>
         </div>
@@ -1174,145 +851,105 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-black text-white py-16 px-4">
-      <div class="max-container">
-        <!-- Footer Content -->
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-12 mb-12">
-          <!-- Company Info -->
+    <footer class="w-full mt-[120px] px-6 bottom-10 pb-12">
+      <div
+        class="max-w-7xl mx-auto rounded-[36px] bg-gradient-to-br from-black via-[#120600] to-black text-white px-12 py-14 relative overflow-hidden"
+      >
+        <!-- Ember background -->
+        <div
+          class="absolute inset-0 bg-[radial-gradient(circle_at_25%_30%,rgba(255,103,31,0.06),transparent_45%),radial-gradient(circle_at_70%_70%,rgba(255,103,31,0.05),transparent_45%)]"
+        ></div>
+
+        <!-- Content -->
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-5 gap-12">
+          <!-- Brand -->
           <div class="md:col-span-2">
-            <div class="flex items-center gap-3 mb-6">
+            <div class="flex items-center gap-4 mb-6">
               <div
-                class="px-2 py-2 rounded-lg border border-white border-opacity-10"
-                style="background: rgba(18, 6, 0, 0.9)"
+                class="px-3 py-2 rounded-xl bg-[#1a0b05] border border-white/10"
               >
-                <span
-                  class="font-inter font-black text-xl"
-                  style="color: #ff671f"
-                  >TEW</span
-                >
+                <span class="font-black text-xl text-[#ff671f]">TEW</span>
               </div>
-              <h3 class="font-montserrat font-black text-xl">
-                Thirumala Engineering Works
+              <h3 class="text-xl font-extrabold leading-tight">
+                Thirumala<br />Engineering Works
               </h3>
             </div>
-            <p class="text-gray-300 mb-2">
-                Complete OEM manufacturing partner delivering hot forged and precision
-                machined components for industrial and engineering businesses.
+
+            <p class="text-gray-300 text-sm mb-2 max-w-md">
+              Complete OEM manufacturing partner delivering hot forged and
+              precision machined components for industrial and engineering
+              businesses.
             </p>
-            <p class="text-gray-500 text-sm">
+            <p class="text-gray-500 text-xs mb-6">
               ISO-certified OEM manufacturing for industrial applications.
-            </p><br><br>
-            <p class="text-gray-300 mb-2"><img src="/footer-loc-icon.png" alt="location-icon">No. 18/152, Guindy Industrial Estate, Chennai – 600032.</p>
-              <p class="text-gray-300 mb-2"><img src="/line-md_phone-call.png" alt="tel-icon">+91 88257 17297</p>
-               <p ><img src="/ic_outline-mail.png" alt="tel-icon">info@thirumalaeng.com</p>
+            </p>
+
+            <div class="space-y-3 text-sm text-gray-300">
+              <p class="flex gap-3 items-start">
+                <span>📍</span>
+                <span
+                  >No. 18/152, Guindy Industrial Estate, Chennai – 600032.</span
+                >
+              </p>
+              <p class="flex gap-3 items-center">
+                <span>📞</span>
+                +91 88257 17297
+              </p>
+              <p class="flex gap-3 items-center">
+                <span>✉️</span>
+                info@thirumalaeng.com
+              </p>
+            </div>
           </div>
 
-          <!-- Quick Links -->
-                     <div>
-            <h4 class="font-montserrat font-bold mb-4">Capabilities</h4>
-            <ul class="space-y-2 text-gray-400 text-sm">
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Hot Forged Components</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Machined Components</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Custom OEM Solutions</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">End-to-End Manufacturing</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">Quality & Inspection</a>
-              </li>
-            </ul>
-          </div>
+          <!-- Capabilities -->
           <div>
-            <h4 class="font-montserrat font-bold mb-4">Company</h4>
+            <h4 class="text-sm font-semibold text-white/90 mb-4">
+              Capabilities
+            </h4>
             <ul class="space-y-2 text-gray-400 text-sm">
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >About Us</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Certifications</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Industries Served</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">Careers</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">Contact Us</a>
-              </li>
+              <li>Hot Forged Components</li>
+              <li>Machined Components</li>
+              <li>Custom OEM Solutions</li>
+              <li>End-to-End Manufacturing</li>
+              <li>Quality & Inspection</li>
             </ul>
           </div>
 
-          <!-- Contact Info -->
+          <!-- Company -->
           <div>
-            <h4 class="font-montserrat font-bold mb-4">Resources</h4>
-                        <ul class="space-y-2 text-gray-400 text-sm">
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Request a Quote</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >FAQs</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition"
-                  >Supplier Information</a
-                >
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#" class="hover:text-orange-500 transition">Terms & Conditions</a>
-              </li>
+            <h4 class="text-sm font-semibold text-white/90 mb-4">Company</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>About Us</li>
+              <li>Certifications</li>
+              <li>Industries Served</li>
+              <li>Careers</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <h4 class="text-sm font-semibold text-white/90 mb-4">Resources</h4>
+            <ul class="space-y-2 text-gray-400 text-sm">
+              <li>Request a Quote</li>
+              <li>FAQs</li>
+              <li>Supplier Information</li>
+              <li>Privacy Policy</li>
+              <li>Terms & Conditions</li>
             </ul>
           </div>
         </div>
 
-        <!-- Footer Bottom -->
-        <div class="border-t border-gray-700 pt-8">
-          <div class="flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-400 text-sm">
-              © 2025 Thirumala Engineering Works. All rights reserved.
-            </p>
-            <div class="flex gap-6 mt-4 md:mt-0">
-              <a
-                href="#"
-                class="text-gray-400 hover:text-orange-500 text-sm transition"
-                >Privacy Policy</a
-              >
-              <a
-                href="#"
-                class="text-gray-400 hover:text-orange-500 text-sm transition"
-                >Terms of Service</a
-              >
-              <a
-                href="#"
-                class="text-gray-400 hover:text-orange-500 text-sm transition"
-                >Cookie Settings</a
-              >
-            </div>
+        <!-- Divider -->
+        <div
+          class="relative z-10 border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400"
+        >
+          <p>© 2025 Thirumala Engineering Works. All rights reserved.</p>
+          <div class="flex gap-6 mt-4 md:mt-0">
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+            <span>Cookie Settings</span>
           </div>
         </div>
       </div>
