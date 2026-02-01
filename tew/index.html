@@ -247,7 +247,7 @@
 
             <!-- Employee card -->
             <div
-              class="group absolute top-8 -left-10 bg-white rounded-2xl shadow-lg px-5 py-4 w-56 cursor-pointer hover:shadow-xl transition"
+              class="group absolute top-8 -left-10 bg-white rounded-2xl shadow-lg px-5 py-4 w-52 cursor-pointer hover:shadow-xl transition"
             >
               <div class="flex items-center gap-3">
                 <img src="Frame.svg" class="w-8 h-8" />
@@ -266,7 +266,7 @@
 
             <!-- Location card -->
             <div
-              class="group absolute -bottom-10 right-10 bg-white rounded-2xl shadow-lg px-6 py-4 w-64 cursor-pointer hover:shadow-xl transition"
+              class="group absolute -bottom-10 right-10 bg-white rounded-2xl shadow-lg px-6 py-4 w-52 cursor-pointer hover:shadow-xl transition"
             >
               <div class="flex items-center gap-3">
                 <img
@@ -348,95 +348,127 @@
     </section>
 
     <!-- CAPABILITIES SECTION -->
-    <section id="capabilities" class="section-padding bg-white">
-      <div class="max-container">
-        <!-- Section Header -->
+    <section id="capabilities" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
         <div class="text-center mb-16">
-          <span class="badge-primary block w-fit mb-4 mx-auto">
-            <img class="badge" src="dot.png" alt="example" /> Manufacturing
-            Capabilities
-          </span>
-          <h2
-            class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900"
+          <span
+            class="inline-flex items-center gap-2 bg-orange-50 text-orange-600 text-sm font-medium px-4 py-2 rounded-full mb-5"
           >
+            <span class="w-2 h-2 bg-orange-500 rounded-full"></span>
+            Manufacturing Capabilities
+          </span>
+
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900">
             Built for Industrial Scale
           </h2>
         </div>
 
-        <!-- Feature Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Card 1: Hot Forging -->
-          <div class="feature-card">
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card -->
+          <div
+            class="relative group h-[520px] rounded-3xl overflow-hidden shadow-xl cursor-pointer"
+          >
+            <!-- Image -->
+            <img
+              src="istockphoto-875273138-170667a 1.png"
+              class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-105"
+            />
+
+            <!-- Overlay -->
             <div
-              class="feature-card-image"
-              style="
-                background: linear-gradient(135deg, #d4a574, #b8956a);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 80px;
-              "
+              class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/20"
+            ></div>
+
+            <!-- TEXT CONTENT (moves only) -->
+            <div
+              class="absolute left-0 right-0 bottom-28 p-8 text-white transition-transform duration-500 group-hover:-translate-y-14"
             >
-              <img
-                src="istockphoto-875273138-170667a 1.png"
-                alt="hot-forging-icon"
-              />
-            </div>
-            <div class="feature-card-overlay"></div>
-            <div class="feature-card-content">
-              <h3>Hot Forged Components</h3>
-              <p>
+              <h3 class="text-3xl font-bold mb-3">Hot Forged Components</h3>
+
+              <!-- short text -->
+              <p
+                class="text-sm text-gray-200 mb-3 group-hover:opacity-0 transition-opacity"
+              >
+                We manufacture steel, brass, aluminum, and copper forged Read
+                more...
+              </p>
+
+              <!-- long details -->
+              <p
+                class="text-sm text-gray-200 leading-relaxed opacity-0 max-h-0 overflow-hidden group-hover:opacity-100 group-hover:max-h-44 transition-all duration-500"
+              >
                 We manufacture steel, brass, aluminum, and copper forged
-                components with precision and durability...
+                components engineered for strength, durability, and long service
+                life. Controlled hot forging improves grain structure and load
+                capacity. In-house tooling ensures consistent high-volume parts.
               </p>
-              <button class="feature-card-btn w-full">View Details</button>
+            </div>
+
+            <!-- BUTTON (fixed position always) -->
+            <div class="absolute bottom-8 left-8 right-8">
+              <button
+                class="w-full py-4 rounded-2xl font-bold text-lg text-white bg-gradient-to-b from-orange-400 via-orange-500 to-orange-700 shadow-[0_12px_30px_rgba(255,115,0,0.55)] hover:brightness-110 transition"
+              >
+                View Details
+              </button>
             </div>
           </div>
 
-          <!-- Card 2: Machining -->
-          <div class="feature-card">
+          <!-- Card -->
+          <div
+            class="relative group h-[500px] rounded-3xl overflow-hidden shadow-lg"
+          >
+            <img
+              src="Macfab-Manufacturing 1.png"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            />
+
             <div
-              class="feature-card-image"
-              style="
-                background: linear-gradient(135deg, #7a8fa3, #5a6f83);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 80px;
-              "
-            >
-              <img
-                src="Macfab-Manufacturing 1.png"
-                alt="Macfab-Manufacturing-icon"
-              />
-            </div>
-            <div class="feature-card-overlay"></div>
-            <div class="feature-card-content">
-              <h3>Machined Components</h3>
-              <p>
-                Our advanced CNC machining capabilities deliver complex
-                precision parts to exact specifications...
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <h3 class="text-2xl font-bold mb-3">Machined Components</h3>
+
+              <p class="text-sm text-gray-200 mb-5">
+                Advanced CNC machining for complex precision parts.
               </p>
-              <button class="feature-card-btn w-full">View Details</button>
+
+              <button
+                class="w-full py-4 rounded-2xl font-bold text-white text-lg bg-gradient-to-b from-orange-400 via-orange-500 to-orange-700 shadow-[0_10px_25px_rgba(255,115,0,0.45)] hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              >
+                View Details
+              </button>
             </div>
           </div>
 
-          <!-- Card 3: Custom -->
-          <div class="feature-card">
-            <div class="feature-card-image">
-              <img
-                src="BCO.a4c0848e-e23e-4ebd-9675-6fe52581b67f 1.png"
-                alt="BCO-icon"
-              />
-            </div>
-            <div class="feature-card-overlay"></div>
-            <div class="feature-card-content">
-              <h3>Custom Manufacturing</h3>
-              <p>
-                We provide custom manufacturing solutions tailored to your
-                unique requirements and specifications...
+          <!-- Card -->
+          <div
+            class="relative group h-[500px] rounded-3xl overflow-hidden shadow-lg"
+          >
+            <img
+              src="BCO.a4c0848e-e23e-4ebd-9675-6fe52581b67f 1.png"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
+            ></div>
+
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <h3 class="text-2xl font-bold mb-3">Custom Manufacturing</h3>
+
+              <p class="text-sm text-gray-200 mb-5">
+                Tailored solutions built to your exact requirements.
               </p>
-              <button class="feature-card-btn w-full">View Details</button>
+
+              <button
+                class="w-full py-4 rounded-2xl font-bold text-white text-lg bg-gradient-to-b from-orange-400 via-orange-500 to-orange-700 shadow-[0_10px_25px_rgba(255,115,0,0.45)] hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              >
+                View Details
+              </button>
             </div>
           </div>
         </div>
@@ -445,7 +477,7 @@
 
     <!-- TESTIMONIALS SECTION -->
     <section class="py-24 bg-white overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-7xl mx-auto px-6 w-[886px]">
         <!-- Header -->
         <div class="text-center mb-16">
           <span
@@ -503,8 +535,84 @@
                   </div>
                 </div>
               </div>
-              <div class="testimonial-card">...</div>
-              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>Exceptional quality and reliability.</h4>
+                  <p>
+                    Thirumala's commitment to quality and on-time delivery has
+                    made them an invaluable partner for our manufacturing needs.
+                    Highly recommended!
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">L&T</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      L&T India
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      Industrial Partner
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>Lorem ipsum dolor sit amet.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga magnam eos possimus commodi voluptates illo,
+                    necessitatibus odio reiciendis quibusdam, cupiditate vero
+                    deleniti dolorem l ibero obcaecati aliquid dicta amet itaque
+                    nobis!
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">Bajaj</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      deleniti dolorem
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      Fuga magnam eos
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="testimonial-card">...</div>
               <div class="testimonial-card">...</div>
@@ -516,9 +624,122 @@
           <div class="relative overflow-hidden">
             <div class="flex flex-col gap-6 animate-scroll-up">
               <!-- Duplicate cards -->
-              <div class="testimonial-card">...</div>
-              <div class="testimonial-card">...</div>
-              <div class="testimonial-card">...</div>
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>Complete manufacturing excellence.</h4>
+                  <p>
+                    From design consultation to final delivery, Thirumala
+                    provides end-to-end solutions that reduce our operational
+                    complexity and costs significantly.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">Bajaj</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      Bajaj Auto
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      Automotive Partner
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>Best-in-class manufacturing partner.</h4>
+                  <p>
+                    The technical expertise and production capabilities of
+                    Thirumala have enabled us to expand our product lines with
+                    confidence and reliability.
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">TVS</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      TVS Motors
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      Manufacturing Partner
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-card">
+                <div class="testimonial-quote">"</div>
+                <div class="testimonial-text">
+                  <h4>Lorem ipsum dolor sit amet.</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga magnam eos possimus commodi voluptates illo,
+                    necessitatibus odio reiciendis quibusdam, cupiditate vero
+                    deleniti dolorem l ibero obcaecati aliquid dicta amet itaque
+                    nobis!
+                  </p>
+                </div>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar">Bajaj</div>
+                  <div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 600;
+                        font-size: 16px;
+                        color: #2e2e2e;
+                        letter-spacing: -0.064px;
+                      "
+                    >
+                      deleniti dolorem
+                    </div>
+                    <div
+                      style="
+                        font-family: &quot;Poppins&quot;, sans-serif;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: rgba(46, 46, 46, 0.4);
+                        letter-spacing: -0.048px;
+                      "
+                    >
+                      Fuga magnam eos
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <div class="testimonial-card">...</div>
               <div class="testimonial-card">...</div>
