@@ -622,23 +622,23 @@ h2 {
 .animate-scroll-down {
   animation: scroll-down 40s linear infinite;
 }
-  .custom-radio input {
-    display: none;
-  }
+.custom-radio input {
+  display: none;
+}
 
-  .custom-radio span::before {
-    content: "";
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 2px solid #444;
-    display: inline-block;
-    margin-right: 10px;
-    transition: all 0.3s ease;
-  }
+.custom-radio span::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #444;
+  display: inline-block;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
 
-  .custom-radio input:checked + span::before {
-    border-color: #f97316; /* orange-500 */
-    background: #f97316;
-    box-shadow: inset 0 0 0 3px #000;
-  }
+.custom-radio input:checked + span::before {
+  border-color: #f97316; /* orange-500 */
+  background: #f97316;
+  box-shadow: inset 0 0 0 3px #000;
+}
