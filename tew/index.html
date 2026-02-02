@@ -8,101 +8,54 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="bg-white">
+  <body class="bg-black">
     <!-- HERO SECTION -->
-    <section class="hero-bg min-h-screen flex items-center justify-center">
-      <div class="hero-content max-container px-4">
-        <div class="text-center">
-          <!-- Badge -->
-          <div class="flex justify-center mb-8">
-            <span class="badge-primary"> #1 on OEM manufacturing </span>
-          </div>
-
-          <!-- Main Headline -->
-          <h1
-            class="font-montserrat font-extrabold text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight max-w-5xl mx-auto"
-          >
-            Complete
-
-            <span class="letter-o"> <span class="mask-layer"></span> </span>EM
-            Manufacturing Solutions<br />
-            for Industrial Engineering Needs
-          </h1>
-
-          <!-- Description -->
-          <p
-            class="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed"
-          >
-            Thirumala Engineering Works is a trusted OEM partner, delivering
-            forged and precision-machined components with end-to-end engineering
-            solutions for industrial brands, all under one roof.
-          </p>
-          <button class="btn-primary mb-16">Explore Capabilities</button>
-          <section id="certificate">
-            <!--- floating certificate images-->
-            <div>
-              <img src="/hero card-1.png" alt="example image" />
-            </div>
-            <div>
-              <img src="/recog.png" alt="exaple img" />
-            </div>
-          </section>
-          <!-- CTA Button -->
-        </div>
+    <header class="nav">
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-
-      <!-- Top Navigation -->
-      <div class="absolute top-8 left-0 right-0 z-20">
-        <div class="max-container px-4 flex items-center justify-between">
-          <!-- Logo -->
-          <div class="flex items-center gap-2">
-            <div
-              class="px-3 py-3 rounded-xl border border-white border-opacity-10"
-              style="background: rgba(255, 255, 255, 0.1)"
-            >
-              <span
-                class="font-inter font-black text-3xl"
-                style="color: #ff671f; letter-spacing: -4.32px"
-                >TEW</span
-              >
-            </div>
-          </div>
-
-          <!-- Nav Links -->
-          <div
-            id="nav-hero-sec"
-            style="
-              background: rgba(255, 255, 255, 0.04);
-              border: 1px solid rgba(254, 82, 0, 0.2);
-            "
-            class="hidden md:flex gap-8 px-8 py-3 rounded-3xl"
-          >
-            <a
-              href="#home"
-              class="text-white text-lg font-bebas tracking-wide hover:text-orange-400"
-              >Home</a
-            >
-            <a
-              href="#capabilities"
-              class="text-white text-opacity-30 text-lg font-bebas tracking-wide hover:text-opacity-100"
-              >Capabilities</a
-            >
-            <a
-              href="#about"
-              class="text-white text-opacity-30 text-lg font-bebas tracking-wide hover:text-opacity-100"
-              >About Us</a
-            >
-            <a
-              href="#facilities"
-              class="text-white text-opacity-30 text-lg font-bebas tracking-wide hover:text-opacity-100"
-              >Facilities</a
-            >
-          </div>
-
-          <!-- Right CTA -->
-          <button class="btn-primary">Contact Us</button>
-        </div>
+      <div class="logo">TEW</div>
+      <nav class="navlinks">
+        <a href="#">HOME</a>
+        <a href="#">CAPABILITIES</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">FACILITIES</a>
+        <span class="nav-line"></span>
+      </nav>
+      <div class="contactus">
+        <button class="cta-nav" href="contact">Contact Us</button>
       </div>
+    </header>
+
+    <section class="hero" aria-label="Hero">
+      <div class="bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="badge">
+          <img src="dot.png" alt="" /> #1 on OEM manufacturing
+        </div>
+        <h1>
+          Complete
+          <span class="letter-o"> <span class="mask-layer"></span> </span>EM
+          Manufacturing Solutions<br />
+          for Industrial Engineering Needs
+        </h1>
+        <p class="lead">
+          Thirumala Engineering Works is a trusted OEM partner, delivering
+          forged and precision‑machined components with end‑to‑end engineering
+          solutions for industrial brands, all under one roof.
+        </p>
+        <a class="hero-cta" href="capabilities">Explore Capabilities</a>
+      </div>
+      <div class="Image">
+        <img src="Hero Card image (1).png" alt="Hero Card 1" />
+        <img src="Hero Card image.png" alt="Recognitions" />
+      </div>
+      <div class="herogradient" role="gradient">
+        <img src="gradient.svg" alt="gradient" />
+      </div>
+      <div class="rounded-band" aria-hidden="true"></div>
     </section>
 
     <!-- STATISTICS SECTION -->
@@ -133,7 +86,7 @@
             <!-- Stat 2 -->
             <div class="stat-card">
               <div class="stat-icon">
-                <img src="/sta-2.svg" alt="Stat Icon 2" />
+                <img src="sta-2.svg" alt="Stat Icon 2" />
               </div>
               <div class="stat-content">
                 <h3>10,000+</h3>
@@ -144,7 +97,7 @@
             <!-- Stat 3 -->
             <div class="stat-card">
               <div class="stat-icon">
-                <img src="/sta-3.svg" alt="Stat Icon 3" />
+                <img src="sta-3.svg" alt="Stat Icon 3" />
               </div>
               <div class="stat-content">
                 <h3>100+</h3>
@@ -166,7 +119,7 @@
           <div class="max-w-2xl">
             <!-- badge -->
             <span
-              class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-2 rounded-full mb-6"
+              class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 text-sm font-semibold px-4 py-2 rounded-full mb-6 text bg-orange-50 text-orange-600"
             >
               <img src="dot.png" class="w-2 h-2" />
               About Thirumala
@@ -208,23 +161,23 @@
 
               <div class="flex items-center gap-6 flex-wrap">
                 <img
-                  src="/client1.png"
+                  src="client1.png"
                   class="h-10 opacity-80 hover:opacity-100 transition"
                 />
                 <img
-                  src="/client2.png"
+                  src="client2.png"
                   class="h-10 opacity-80 hover:opacity-100 transition"
                 />
                 <img
-                  src="/client3.png"
+                  src="client3.png"
                   class="h-10 opacity-80 hover:opacity-100 transition"
                 />
                 <img
-                  src="/client4.png"
+                  src="client4.png"
                   class="h-10 opacity-80 hover:opacity-100 transition"
                 />
                 <img
-                  src="/client5.png"
+                  src="client5.png"
                   class="h-10 opacity-80 hover:opacity-100 transition"
                 />
               </div>
@@ -235,24 +188,24 @@
           <div class="relative w-full max-w-2xl ml-auto">
             <!-- main image -->
             <img
-              src="/about-vid.gif"
-              class="w-full h-[420px] object-cover rounded-3xl shadow-xl"
+              src="about-vid.gif"
+              class="w-450px h-[448px] object-cover rounded-3xl shadow-xl"
             />
 
             <!-- experience badge -->
             <img
+              class="absolute -top-12 -right-12 w-32 transform rotate-12"
               src="5f6558b074cd3c70b5a68ae2fac733ccbaed8f38.png"
-              class="absolute -top-12 -right-12 w-32"
             />
 
             <!-- Employee card -->
             <div
-              class="group absolute top-8 -left-10 bg-white rounded-2xl shadow-lg px-5 py-4 w-52 cursor-pointer hover:shadow-xl transition"
+              class="group absolute top-8 -left-10 bg-white rounded-3xl shadow-lg px-5 py-4 w-52 cursor-pointer hover:shadow-xl transition ease-in-out duration-600"
             >
               <div class="flex items-center gap-3">
-                <img src="Frame.svg" class="w-8 h-8" />
+                <img src="Frame.svg" class="w-8 h-8" alt="frame" />
                 <div>
-                  <p class="font-bold text-lg">25,000+</p>
+                  <p class="font-bold text-lg text-black">25,000+</p>
                   <p class="text-sm text-gray-500">Employee</p>
                 </div>
               </div>
@@ -274,7 +227,7 @@
                   class="w-7 h-7"
                 />
                 <div>
-                  <p class="font-bold text-lg">15+</p>
+                  <p class="font-bold text-lg text-black">15+</p>
                   <p class="text-sm text-gray-500">Location</p>
                 </div>
               </div>
@@ -291,7 +244,7 @@
 
       <marquee behavior="scroll" direction="left" scrollamount="10">
         <img
-          src="/mar1.png"
+          src="mar1.png"
           style="
             height: 40px;
             width: auto;
@@ -300,7 +253,7 @@
           "
         />
         <img
-          src="/mar2.png"
+          src="mar2.png"
           style="
             height: 40px;
             width: auto;
@@ -309,7 +262,7 @@
           "
         />
         <img
-          src="/mar3.png"
+          src="mar3.png"
           style="
             height: 40px;
             width: auto;
@@ -318,7 +271,7 @@
           "
         />
         <img
-          src="/mar4.png"
+          src="mar4.png"
           style="
             height: 40px;
             width: auto;
@@ -327,7 +280,7 @@
           "
         />
         <img
-          src="/mar5.png"
+          src="mar5.png"
           style="
             height: 40px;
             width: auto;
@@ -336,7 +289,7 @@
           "
         />
         <img
-          src="/mar4.png"
+          src="mar4.png"
           style="
             height: 40px;
             width: auto;
@@ -368,7 +321,7 @@
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Card -->
           <div
-            class="relative group h-[520px] rounded-3xl overflow-hidden shadow-xl cursor-pointer"
+            class="relative group h-[500px] rounded-3xl overflow-hidden shadow-xl cursor-pointer"
           >
             <!-- Image -->
             <img
@@ -1072,7 +1025,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="w-full mt-[120px] px-6 bottom-10 pb-12">
+    <footer class="w-full px-6 bottom-10 pb-12 bg-white">
       <div
         class="max-w-7xl mx-auto rounded-[36px] bg-gradient-to-br from-black via-[#120600] to-black text-white px-12 py-14 relative overflow-hidden"
       >
